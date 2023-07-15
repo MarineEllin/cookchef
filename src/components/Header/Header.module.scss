@@ -1,0 +1,41 @@
+@use "../../assets/styles/mixins" as mixin;
+
+.header {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  height: 68px;
+  padding: 15px 30px;
+  background-color: white;
+  box-shadow: var(--box-shadow-nav);
+  color: var(--primary);
+  font-size: 2rem;
+}
+
+p {
+  margin: 0;
+  padding: 0 1rem;
+}
+
+.headerList {
+  @include mixin.xs {
+    display: none;
+  }
+}
+
+.menuXS {
+  display: none;
+  cursor: pointer;
+  transition: 0.2s opacity;
+  &:hover {
+    opacity: 0.8;
+  }
+  @include mixin.xs {
+    display: block;
+  }
+}
+
+.logo {
+  cursor: pointer;
+  color: var(--primary);
+}

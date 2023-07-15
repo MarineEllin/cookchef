@@ -1,0 +1,36 @@
+@use "./assets/styles/mixins" as mixin;
+
+.wishlistContainer {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: calc(100vh - 68px);
+  top: 68px;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: rgba(38, 71, 78, 0.3);
+}
+
+.wishlist {
+  height: 300px;
+  width: 230px;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  margin: 60px;
+  overflow-y: auto;
+  @include mixin.xs {
+    width: 100%;
+    margin: 0;
+
+    top: 68px;
+  }
+  i {
+    cursor: pointer;
+    color: var(--primary);
+    font-size: 22px;
+  }
+}

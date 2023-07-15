@@ -1,0 +1,17 @@
+@use "assets/styles/mixins" as mixin;
+
+.searchBar {
+  padding: 10px 15px;
+  border: 2px solid var(--primary);
+  border-radius: 20px;
+  @include mixin.xs {
+    padding: 0px 15px 5px 15px;
+  }
+  input {
+    outline: 0;
+    border: 0;
+    @include mixin.xs {
+      line-height: 0.8rem;
+    }
+  }
+}

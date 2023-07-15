@@ -1,0 +1,9 @@
+a {
+  padding: 10px;
+  margin-right: 15px;
+}
+
+.active {
+  color: var(--primary);
+  transition: color 0.2s;
+}
